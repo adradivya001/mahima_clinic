@@ -1,20 +1,15 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Phone, Star, Sparkles, MapPin, ArrowRight, Clock, Building2, User } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Calendar, Phone, Star, MapPin, ArrowRight, Clock, Building2 } from 'lucide-react';
 import { siteConfig } from '@/content/site.config';
-import { primaryDoctor } from '@/content/doctor';
 import { BotanicalParticles } from '@/components/effects/BotanicalParticles';
 import { trackEvent } from '@/lib/analytics';
 import mahimaBuilding from '@/assets/images/mahima_building.png';
-import mahimaD3 from '@/assets/images/mahima_d3.png';
 
 interface HeroProps {
   onOpenAppointment: () => void;
 }
 
 export function Hero({ onOpenAppointment }: HeroProps) {
-  const [activeHeroView, setActiveHeroView] = useState<'doctor' | 'building'>('doctor');
-
   return (
     <section id="home" className="relative pt-24 pb-12 lg:pt-28 lg:pb-16 overflow-hidden bg-gradient-to-b from-[#F7F5EE] via-[#F3EFE6] to-[#F7F5EE]">
       {/* Floating Botanical Background Leaves */}
@@ -109,7 +104,7 @@ export function Hero({ onOpenAppointment }: HeroProps) {
 
           </motion.div>
 
-          {/* Right Visual Composition (5 cols): Doctor + Hospital Showcase */}
+          {/* Right Visual Composition (5 cols): Clinic Facility Showcase */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -121,108 +116,44 @@ export function Hero({ onOpenAppointment }: HeroProps) {
               {/* Main Visual Image Card */}
               <div className="relative rounded-3xl overflow-hidden bg-white p-2.5 shadow-xl border border-botanical-200">
                 
-                {/* Switcher Header Pill */}
+                {/* Header Tag */}
                 <div className="flex items-center justify-between mb-2 px-1">
-                  <div className="flex items-center gap-1 bg-botanical-50 p-1 rounded-xl border border-botanical-100">
-                    <button
-                      onClick={() => setActiveHeroView('doctor')}
-                      className={`flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-bold transition-all ${
-                        activeHeroView === 'doctor'
-                          ? 'bg-botanical-700 text-white shadow-xs'
-                          : 'text-charcoal-700 hover:text-botanical-800'
-                      }`}
-                    >
-                      <User className="w-3 h-3" />
-                      <span>Chief Doctor</span>
-                    </button>
-
-                    <button
-                      onClick={() => setActiveHeroView('building')}
-                      className={`flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-bold transition-all ${
-                        activeHeroView === 'building'
-                          ? 'bg-botanical-700 text-white shadow-xs'
-                          : 'text-charcoal-700 hover:text-botanical-800'
-                      }`}
-                    >
-                      <Building2 className="w-3 h-3" />
-                      <span>Clinic Facility</span>
-                    </button>
+                  <div className="flex items-center gap-1.5 bg-botanical-50 px-3 py-1 rounded-xl border border-botanical-100 text-botanical-800 font-bold text-xs">
+                    <Building2 className="w-3.5 h-3.5 text-botanical-600" />
+                    <span>Clinic Facility Entrance</span>
                   </div>
 
-                  <span className="text-[11px] font-bold text-herbal-800 bg-herbal-100 px-2 py-0.5 rounded-md border border-herbal-200 hidden sm:inline-block">
-                    Anantapur
+                  <span className="text-[11px] font-bold text-herbal-800 bg-herbal-100 px-2 py-0.5 rounded-md border border-herbal-200">
+                    Vidyuth Nagar Circle
                   </span>
                 </div>
 
                 {/* Photo Display Frame */}
                 <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-botanical-50">
-                  <AnimatePresence mode="wait">
-                    {activeHeroView === 'doctor' ? (
-                      <motion.div
-                        key="hero-doctor"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="w-full h-full relative"
-                      >
-                        <img
-                          src={mahimaD3}
-                          alt="Dr. Pogula Nagendra Babu - Sri Mahima Multispeciality Homoeo Clinic"
-                          className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-                          loading="eager"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-botanical-950/80 via-transparent to-transparent pointer-events-none" />
+                  <img
+                    src={mahimaBuilding}
+                    alt="Sri Mahima Multispeciality Homeo Clinic Entrance"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-botanical-950/80 via-transparent to-transparent pointer-events-none" />
 
-                        {/* Doctor Caption */}
-                        <div className="absolute bottom-3 left-3 right-3 text-white">
-                          <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-herbal-500/90 text-[10px] font-bold text-white uppercase tracking-wider mb-1">
-                            <Sparkles className="w-2.5 h-2.5" /> {primaryDoctor.role}
-                          </div>
-                          <h2 className="text-lg font-serif font-bold text-white leading-tight">
-                            {primaryDoctor.name}
-                          </h2>
-                          <p className="text-[11px] text-sage-200">
-                            {primaryDoctor.qualifications.join(' · ')}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key="hero-building"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="w-full h-full relative"
-                      >
-                        <img
-                          src={mahimaBuilding}
-                          alt="Sri Mahima Clinic Building and Entrance"
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                          loading="eager"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-botanical-950/80 via-transparent to-transparent pointer-events-none" />
-
-                        {/* Building Caption */}
-                        <div className="absolute bottom-3 left-3 right-3 text-white">
-                          <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-botanical-700/90 text-[10px] font-bold text-herbal-300 uppercase tracking-wider mb-1">
-                            <MapPin className="w-2.5 h-2.5" /> Vidyuth Nagar Circle
-                          </div>
-                          <h2 className="text-base font-serif font-bold text-white leading-tight">
-                            Sri Mahima Multispeciality Clinic
-                          </h2>
-                          <p className="text-[11px] text-sage-200">
-                            12/4/75, Vidyuth Nagar Circle, Anantapur
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {/* Building Caption */}
+                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                    <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-botanical-700/90 text-[10px] font-bold text-herbal-300 uppercase tracking-wider mb-1">
+                      <MapPin className="w-2.5 h-2.5" /> Anantapur Center
+                    </div>
+                    <h2 className="text-base font-serif font-bold text-white leading-tight">
+                      Sri Mahima Multispeciality Homeo Clinic
+                    </h2>
+                    <p className="text-[11px] text-sage-200">
+                      12/4/75, Vidyuth Nagar Circle, Anantapur
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Floating Rating Badge Overlay on Corner (Clean, no overlap) */}
+              {/* Floating Rating Badge Overlay on Corner */}
               <motion.div
                 initial={{ y: 15, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
