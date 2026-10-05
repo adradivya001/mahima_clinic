@@ -27,9 +27,9 @@ export function TrustStrip() {
       accent: 'text-sage-800 bg-sage-100',
     },
     {
-      icon: IndianRupee,
-      value: '₹100',
-      label: 'Consultation Fee',
+      icon: HeartHandshake,
+      value: '45K+',
+      label: 'Patients Restored',
       desc: 'Accessible family healthcare for all',
       accent: 'text-botanical-800 bg-botanical-100',
     },

@@ -18,10 +18,10 @@ export function DoctorPage({ onOpenAppointment }: DoctorPageProps) {
   return (
     <div className="pt-28 pb-20 bg-[#F7F5EE] min-h-screen">
       <Helmet>
-        <title>Our Doctors | Dr. Pogula Nagendra Babu & Dr. Premajyothi Fraser | Sri Mahima Clinic</title>
+        <title>Our Doctors | Dr. P. Kumaraiah, Dr. Nagendra Babu & Dr. Premajyothi | Sri Mahima Clinic</title>
         <meta
           name="description"
-          content="Meet Dr. Pogula Nagendra Babu (B.H.M.S, M.D., M.B.A.) and Dr. Premajyothi Fraser (B.H.M.S, M.D., F.H.P.C.), senior homeopathic faculty and consultants at Sri Mahima Multispeciality Homoeo Clinic, Anantapur."
+          content="Meet Dr. P. Kumaraiah (B.H.M.S, M.D. Acu. - 33 Years Exp), Dr. Pogula Nagendra Babu (B.H.M.S, M.D. Hom., M.B.A. H.M.), and Dr. Premajyothi Fraser (B.H.M.S, M.D., F.H.P.C.) at Sri Mahima Multispeciality Homoeo Clinic."
         />
       </Helmet>
 
@@ -31,13 +31,13 @@ export function DoctorPage({ onOpenAppointment }: DoctorPageProps) {
         <div className="mb-10 text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-botanical-100 text-botanical-800 text-xs font-bold uppercase tracking-wider">
             <Award className="w-3.5 h-3.5 text-botanical-600" />
-            Medical Faculty &amp; Consultants
+            Medical Faculty &amp; Leadership
           </div>
           <h1 className="text-3xl sm:text-5xl font-serif font-bold text-botanical-900 tracking-tight">
             Our Medical Team
           </h1>
           <p className="text-base text-charcoal-600 font-medium">
-            Renowned homeopathic physicians bridging academic excellence at Anuradha Homoeopathic Medical College, Bengaluru with individualized patient care at Sri Mahima Clinic, Anantapur.
+            Distinguished homeopathic physicians combining 33+ years of clinical leadership and academic expertise in the Department of Organon of Medicine with individualized patient care.
           </p>
         </div>
 
@@ -78,10 +78,6 @@ export function DoctorPage({ onOpenAppointment }: DoctorPageProps) {
                   alt={activeDoc.name}
                   className="w-full h-full object-cover object-top"
                 />
-                <div className="absolute bottom-4 left-4 right-4 bg-botanical-900/90 backdrop-blur-md p-3 rounded-2xl text-white text-center">
-                  <span className="text-xs font-bold text-herbal-300">OPD Consultation Fee:</span>
-                  <p className="text-lg font-bold text-white">₹100 (Affordable Care)</p>
-                </div>
               </div>
             </div>
 
@@ -149,7 +145,7 @@ export function DoctorPage({ onOpenAppointment }: DoctorPageProps) {
                   className="px-8 py-3.5 rounded-full bg-botanical-700 hover:bg-botanical-800 text-white font-bold text-sm shadow-botanical transition-all inline-flex items-center gap-2"
                 >
                   <Calendar className="w-4 h-4 text-herbal-300" />
-                  <span>Book Consultation with {activeDoc.name} (₹100)</span>
+                  <span>Book Consultation with {activeDoc.name}</span>
                 </button>
 
                 <a

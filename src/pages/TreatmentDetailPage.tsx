@@ -48,7 +48,7 @@ export function TreatmentDetailPage({ onOpenAppointment }: TreatmentDetailPagePr
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-botanical-200 shadow-premium mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div className="lg:col-span-8 space-y-4">
+            <div className="lg:col-span-7 space-y-4">
               <span className="inline-block px-3.5 py-1 rounded-full bg-botanical-100 text-botanical-800 text-xs font-bold uppercase tracking-wider">
                 {treatment.badge}
               </span>
@@ -81,13 +81,30 @@ export function TreatmentDetailPage({ onOpenAppointment }: TreatmentDetailPagePr
               </div>
             </div>
 
-            <div className="lg:col-span-4">
-              <div className="relative rounded-3xl overflow-hidden bg-botanical-100 border border-botanical-200 aspect-[4/4] shadow-md">
+            <div className="lg:col-span-5">
+              <div className="relative rounded-3xl overflow-hidden bg-botanical-100 border border-botanical-200 aspect-[4/3.2] shadow-xl group">
                 <img
                   src={treatment.heroImage}
                   alt={treatment.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="eager"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-botanical-950/80 via-transparent to-black/20" />
+                
+                <div className="absolute top-3 left-3">
+                  <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-botanical-900 font-bold text-xs shadow-xs">
+                    {treatment.badge}
+                  </span>
+                </div>
+
+                <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-sage-200 block">
+                    Specialized Holistic Care
+                  </span>
+                  <p className="text-xs font-semibold text-white drop-shadow-xs">
+                    Sri Mahima Multispeciality Homoeo Clinic
+                  </p>
+                </div>
               </div>
             </div>
 

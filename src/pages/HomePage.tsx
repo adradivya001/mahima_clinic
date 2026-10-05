@@ -8,7 +8,6 @@ import { WhyChooseMahima } from '@/components/sections/WhyChooseMahima';
 import { PatientJourney } from '@/components/sections/PatientJourney';
 import { ReviewsSection } from '@/components/sections/ReviewsSection';
 import { LocationContact } from '@/components/sections/LocationContact';
-import { FAQSection } from '@/components/sections/FAQSection';
 import { siteConfig } from '@/content/site.config';
 import { primaryDoctor } from '@/content/doctor';
 
@@ -36,7 +35,7 @@ export function HomePage({ onOpenAppointment }: HomePageProps) {
             alternateName: 'Sri Mahima Clinic Anantapur',
             url: siteConfig.seo.siteUrl,
             telephone: siteConfig.contact.phone,
-            priceRange: '₹100',
+            priceRange: 'Affordable',
             address: {
               '@type': 'PostalAddress',
               streetAddress: siteConfig.contact.address.fullAddress,
@@ -107,9 +106,6 @@ export function HomePage({ onOpenAppointment }: HomePageProps) {
 
       {/* 9. LOCATION & CONTACT */}
       <LocationContact onOpenAppointment={() => onOpenAppointment('General Consultation')} />
-
-      {/* 11. FAQ ACCORDION */}
-      <FAQSection />
     </>
   );
 }

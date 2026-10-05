@@ -18,7 +18,7 @@ export const faqs: FAQItem[] = [
     category: 'Consultation & Fees',
     question: 'What is the consultation fee at Sri Mahima Homoeo Clinic?',
     answer:
-      'The clinic maintains a highly accessible, nominal consultation fee of ₹100 for Dr. Pogula Kumaraiah’s in-person evaluation. Our commitment is to ensure trusted, high-quality healthcare remains affordable for all families.',
+      'The clinic maintains highly accessible, nominal consultation charges for doctor evaluations. Our commitment is to ensure trusted, high-quality healthcare remains affordable for all families.',
   },
   {
     id: 'faq-2',

@@ -23,7 +23,7 @@ export function WhyChooseMahima() {
     },
     {
       num: '04',
-      title: '₹100 Accessible OPD',
+      title: 'Accessible & Affordable OPD',
       desc: 'Transparent, nominal consultation charges at Vidyuth Nagar Circle.',
       icon: ShieldCheck,
     },

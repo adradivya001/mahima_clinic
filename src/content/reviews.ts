@@ -36,7 +36,7 @@ export const reviewsSummary = {
     'Attentive & Caring Consultation',
     'High Success with Chronic Skin Concerns',
     '33+ Years of Established Experience',
-    'Nominal ₹100 Consultation Charge',
+    'Affordable & Transparent Consultation',
     'Comfortable Vidyuth Nagar Location',
   ],
 };
@@ -52,7 +52,7 @@ export const patientReviews: PatientReview[] = [
     condition: 'Chronic Gastric & Ulcerative Issue',
     headline: 'Exceptional diagnosis by Dr. Kumaraiah Sir',
     content:
-      'Dr. Pogula Kumaraiah listens very patiently to the entire history without rushing. For my gastric complaint and recurring indigestion of 4 years, his medicines worked wonders within 2 months. The clinic is very clean and the consultation fee of Rs 100 is a true service to society.',
+      'Dr. Pogula Kumaraiah listens very patiently to the entire history without rushing. For my gastric complaint and recurring indigestion of 4 years, his medicines worked wonders within 2 months. The clinic is very clean and the affordable consultation fee is a true service to society.',
     verified: true,
     treatmentCategory: 'Chronic Conditions',
   },

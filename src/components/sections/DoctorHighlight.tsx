@@ -52,11 +52,6 @@ export function DoctorHighlight({ onOpenAppointment }: DoctorHighlightProps) {
                       className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-botanical-950/70 via-transparent to-transparent pointer-events-none" />
-                    
-                    <div className="absolute bottom-2 left-2 right-2 bg-botanical-900/90 backdrop-blur-md px-2 py-0.5 rounded-lg text-center">
-                      <span className="text-[10px] font-bold text-herbal-300">OPD Fee: ₹100</span>
-                    </div>
                   </div>
 
                   {/* Title & Qualifications */}
@@ -82,14 +77,17 @@ export function DoctorHighlight({ onOpenAppointment }: DoctorHighlightProps) {
 
                     {/* Role / Leadership Badge */}
                     {doc.leadershipRoles ? (
-                      <div className="p-2.5 rounded-xl bg-botanical-50 border border-botanical-100 text-[11px] text-charcoal-700 space-y-0.5">
+                      <div className="p-2.5 rounded-xl bg-botanical-50 border border-botanical-100 text-[11px] text-charcoal-700 space-y-1">
                         <div className="flex items-center gap-1 font-bold text-botanical-800 text-[11px]">
                           <Award className="w-3.5 h-3.5 text-botanical-600 shrink-0" />
-                          <span>Leadership &amp; Experience</span>
+                          <span>Professional Details</span>
                         </div>
-                        <p className="text-[10px] text-charcoal-600 font-medium">
-                          {doc.leadershipRoles[0]} · {doc.leadershipRoles[1]}
-                        </p>
+                        <ul className="text-[10px] text-charcoal-600 font-medium space-y-0.5 list-disc list-inside">
+                          <li>Ex-RDT Medical Officer</li>
+                          <li>State General Secretary, N.A.M.A.</li>
+                          <li>State Joint Secretary, L.I.M.P.</li>
+                          <li>33 Years of Experience in Homoeopathy</li>
+                        </ul>
                       </div>
                     ) : (
                       <div className="p-2.5 rounded-xl bg-botanical-50 border border-botanical-100 text-[11px] text-charcoal-700">

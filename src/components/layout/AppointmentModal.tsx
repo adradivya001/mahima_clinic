@@ -109,7 +109,7 @@ export function AppointmentModal({ isOpen, onClose, initialTreatment = 'General 
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-charcoal-500">Consultation Fee:</span>
-                      <span className="font-bold text-botanical-800">₹100 (Pay at Clinic)</span>
+                      <span className="font-bold text-botanical-800">Pay at Clinic</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-charcoal-500">Clinic Location:</span>
@@ -218,7 +218,7 @@ export function AppointmentModal({ isOpen, onClose, initialTreatment = 'General 
                         className="w-full px-4 py-2.5 rounded-xl border border-botanical-200 bg-white text-sm text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-botanical-600 focus:border-transparent"
                       >
                         <option value="Anantapur (Vidyuth Nagar Circle)">Anantapur (Vidyuth Nagar Circle)</option>
-                        <option value="Bengaluru (Marathahalli)">Bengaluru (Marathahalli)</option>
+                        <option value="Bengaluru (Jayanagar 4th T Block)">Bengaluru (Jayanagar 4th T Block)</option>
                       </select>
                     </div>
 
@@ -234,7 +234,7 @@ export function AppointmentModal({ isOpen, onClose, initialTreatment = 'General 
                         <option value="Dr. P. Kumaraiah (M.D. – Sri Mahima Group)">Dr. P. Kumaraiah — B.H.M.S., M.D. (Acup.)</option>
                         <option value="Dr. Pogula Nagendra Babu (Chief Consultant)">Dr. Pogula Nagendra Babu — B.H.M.S., M.D., M.B.A.</option>
                         <option value="Dr. Premajyothi Fraser (Wellness Physician)">Dr. Premajyothi Fraser — B.H.M.S., M.D., F.H.P.C.</option>
-                        <option value="Any Available Senior Consultant">Any Available Senior Consultant (₹100 OPD)</option>
+                        <option value="Any Available Senior Consultant">Any Available Senior Consultant</option>
                       </select>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ export function AppointmentModal({ isOpen, onClose, initialTreatment = 'General 
                       <option value="Pain & Lifestyle (Migraine, Joints, Sciatica)">Pain & Lifestyle (Migraine, Joint Care, Sciatica)</option>
                       <option value="Family & Child Care">Family & Child Care (Pediatric Wellness)</option>
                       <option value="Classical Homoeopathy & Acupuncture">Classical Homoeopathy & Acupuncture</option>
-                      <option value="General Consultation">General Health Consultation (₹100)</option>
+                      <option value="General Consultation">General Health Consultation</option>
                     </select>
                   </div>
 
@@ -273,7 +273,7 @@ export function AppointmentModal({ isOpen, onClose, initialTreatment = 'General 
 
                   <div className="flex items-center gap-2 p-3 bg-botanical-50/80 border border-botanical-200/60 rounded-xl text-xs text-botanical-900">
                     <AlertCircle className="w-4 h-4 text-botanical-700 shrink-0" />
-                    <span>Clinic consultation fee is only <strong>₹100</strong>. Pay comfortably at the clinic desk.</span>
+                    <span>Nominal consultation charges apply. Pay comfortably at the clinic desk.</span>
                   </div>
 
                   <div className="pt-2">

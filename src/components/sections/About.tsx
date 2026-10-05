@@ -9,20 +9,20 @@ interface AboutProps {
 export function About({ onOpenAppointment }: AboutProps) {
   const pillars = [
     {
-      title: 'Constitutional Case Taking',
-      desc: 'In-depth assessment of physical symptoms, lifestyle, and hereditary root causes.',
+      title: 'Gentle & Natural Healing',
+      desc: 'Pure, safe remedies that stimulate the body’s innate vital force without harsh side effects.',
     },
     {
-      title: 'Organon & Philosophy',
-      desc: 'Classical homoeopathic principles led by academic medical faculty.',
+      title: 'Minimal Medicines Emphasis',
+      desc: 'Precision classical homeopathic prescribing focused on minimal dosages for maximum natural response.',
     },
     {
-      title: 'Gentle & Natural Care',
-      desc: 'Pure, safe remedies free from harsh pharmaceutical side effects.',
+      title: 'Holistic Approach to Health',
+      desc: 'Comprehensive constitutional evaluation treating mind, body, and underlying root causes.',
     },
     {
-      title: '₹100 Accessible OPD',
-      desc: 'Nominal consultation fee ensuring trusted care for every family in Anantapur.',
+      title: 'Anantapur & Bengaluru Centers',
+      desc: 'Convenient consultation centers in Anantapur (Vidyuth Nagar) and Bengaluru (Jayanagar).',
     },
   ];
 
@@ -42,7 +42,7 @@ export function About({ onOpenAppointment }: AboutProps) {
             <div className="bg-gradient-to-br from-botanical-800 to-botanical-700 text-white rounded-3xl p-6 sm:p-8 shadow-botanical space-y-6">
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2 text-herbal-300 text-xs font-bold uppercase tracking-wider">
-                  <Sparkles className="w-4 h-4" /> Clinical Heritage
+                  <Sparkles className="w-4 h-4" /> Our Mission
                 </div>
                 <span className="text-[10px] bg-white/10 px-2.5 py-1 rounded-full text-sage-200">
                   Est. 1990s
@@ -50,29 +50,29 @@ export function About({ onOpenAppointment }: AboutProps) {
               </div>
 
               <div>
-                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
-                  33+ Years of Trusted Care
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mb-2">
+                  "{siteConfig.tagline}"
                 </h3>
-                <p className="text-xs sm:text-sm text-sage-200 leading-relaxed">
-                  Sri Mahima Multispeciality Homeo Clinic was founded with a mission to deliver pure, compassionate constitutional care to families across Anantapur and Rayalaseema.
+                <p className="text-xs sm:text-sm text-sage-200 leading-relaxed font-serif italic">
+                  "{siteConfig.mission}"
                 </p>
               </div>
 
               {/* Metric Highlights */}
               <div className="grid grid-cols-2 gap-3 pt-2">
                 <div className="p-3 rounded-2xl bg-white/10 border border-white/10 text-center">
-                  <span className="block text-xl sm:text-2xl font-serif font-bold text-white">4.9 ★</span>
-                  <span className="text-[10px] text-sage-300">920+ Google Reviews</span>
+                  <span className="block text-xl sm:text-2xl font-serif font-bold text-white">33+</span>
+                  <span className="text-[10px] text-sage-300">Years Experience</span>
                 </div>
                 <div className="p-3 rounded-2xl bg-white/10 border border-white/10 text-center">
-                  <span className="block text-xl sm:text-2xl font-serif font-bold text-white">₹100</span>
-                  <span className="text-[10px] text-sage-300">Nominal OPD Fee</span>
+                  <span className="block text-xl sm:text-2xl font-serif font-bold text-white">2</span>
+                  <span className="text-[10px] text-sage-300">Modern Clinics</span>
                 </div>
               </div>
 
               <div className="pt-2 flex items-center gap-2 text-xs text-sage-200">
                 <MapPin className="w-4 h-4 text-herbal-400 shrink-0" />
-                <span>12/4/75, Vidyuth Nagar Circle, Anantapur</span>
+                <span>Anantapur (Vidyuth Nagar) &amp; Bengaluru (Jayanagar)</span>
               </div>
             </div>
           </motion.div>
@@ -91,12 +91,12 @@ export function About({ onOpenAppointment }: AboutProps) {
                 About Sri Mahima Clinic
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-botanical-900 tracking-tight leading-tight">
-                Holistic Healthcare Rooted in Personalized Care
+                Multispeciality Homoeopathy for Natural Healing
               </h2>
             </div>
 
             <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed">
-              Located at Vidyuth Nagar Circle in Anantapur, <strong className="text-botanical-900 font-semibold">{siteConfig.name}</strong> provides comprehensive constitutional homeopathic care led by senior academic faculty consultants. We treat the whole person to achieve lasting well-being.
+              <strong className="text-botanical-900 font-semibold">{siteConfig.name}</strong> is committed to bringing homoeopathic healing to every being through gentle, effective, and minimal medicines. Backed by 33+ years of clinical mastery, we provide individualized care across our Anantapur and Bengaluru clinics.
             </p>
 
             {/* 4 Crisp Pillars Grid */}
@@ -126,17 +126,17 @@ export function About({ onOpenAppointment }: AboutProps) {
                 onClick={onOpenAppointment}
                 className="w-full sm:w-auto px-6 py-3 rounded-full bg-botanical-700 hover:bg-botanical-800 text-white font-bold text-xs sm:text-sm shadow-botanical transition-all flex items-center justify-center gap-2"
               >
-                <span>Book a Consultation (₹100)</span>
+                <span>Book a Consultation</span>
                 <ArrowRight className="w-4 h-4 text-herbal-300" />
               </button>
 
               <a
-                href={siteConfig.contact.googleMapsUrl}
+                href={siteConfig.social.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-bold text-botanical-700 hover:text-botanical-900 underline"
               >
-                Locate Clinic in Google Maps ↗
+                Follow @{siteConfig.social.instagram} on Instagram ↗
               </a>
             </div>
 

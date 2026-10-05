@@ -73,7 +73,7 @@ export function LocationContact({ onOpenAppointment }: LocationContactProps) {
                 </div>
                 {selectedBranchId === 'bengaluru' ? (
                   <p className="text-xs text-charcoal-700">
-                    Associated with <strong>Dr. Nagendra Babu Pogula</strong> (Professor, Anuradha Homoeopathic Medical College &amp; Hospital, Bengaluru).
+                    Associated with <strong>Dr. Pogula Nagendra Babu</strong> (Professor – Department of Community Medicine, Anuradha Homoeopathic Medical College &amp; Hospital, Bengaluru).
                   </p>
                 ) : (
                   <p className="text-xs text-charcoal-700">

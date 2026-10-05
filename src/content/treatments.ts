@@ -2,6 +2,12 @@
 // AREAS OF CARE / TREATMENT CATEGORIES
 // Structured for Sri Mahima Multispeciality Homoeo Clinic
 // ============================================================
+import chronicImg from '@/assets/images/treatments/chronic_care.jpg';
+import skinHairImg from '@/assets/images/treatments/skin_hair.jpg';
+import womensHealthImg from '@/assets/images/treatments/womens_health.jpg';
+import painLifestyleImg from '@/assets/images/treatments/pain_lifestyle.jpg';
+import familyPediatricImg from '@/assets/images/treatments/family_pediatric.jpg';
+import holisticHomeoImg from '@/assets/images/treatments/holistic_homeo.jpg';
 
 export interface TreatmentCategory {
   id: string;
@@ -36,7 +42,7 @@ export const treatmentCategories: TreatmentCategory[] = [
     shortDesc: 'Personalized holistic management for lifestyle disorders, gastrointestinal inflammation, and recurring respiratory concerns.',
     detailedDesc:
       'Chronic ailments develop gradually and often resist conventional single-symptom approaches. At Sri Mahima Clinic, Dr. Pogula Kumaraiah performs an exhaustive constitutional evaluation to identify underlying metabolic imbalances, immune triggers, and hereditary tendencies.',
-    heroImage: '/assets/images/mahima_d2.png',
+    heroImage: chronicImg,
     conditions: [
       {
         name: 'Digestive & Gastric Conditions',
@@ -86,7 +92,7 @@ export const treatmentCategories: TreatmentCategory[] = [
     shortDesc: 'Gentle, internal healing for psoriasis, eczema, vitiligo, lichen planus, and persistent hair fall.',
     detailedDesc:
       'In homoeopathy, skin is understood as a vital reflective organ. Rather than applying harsh topical steroids that only suppress eruptions temporarily, our clinic investigates underlying immune triggers, stress levels, and toxicity.',
-    heroImage: '/assets/images/mahima_d3.png',
+    heroImage: skinHairImg,
     conditions: [
       {
         name: 'Psoriasis & Scalp Plaques',
@@ -137,7 +143,7 @@ export const treatmentCategories: TreatmentCategory[] = [
     shortDesc: 'Personalized care for PCOS/PCOD, irregular cycles, hormonal imbalances, and supportive fertility care.',
     detailedDesc:
       'Women’s bodies undergo complex hormonal transitions. Sri Mahima Clinic provides a compassionate, confidential environment to address reproductive, hormonal, and emotional health challenges without aggressive synthetic hormones.',
-    heroImage: '/assets/images/mahima_d1.png',
+    heroImage: womensHealthImg,
     conditions: [
       {
         name: 'PCOS & PCOD Care',
@@ -183,7 +189,7 @@ export const treatmentCategories: TreatmentCategory[] = [
     shortDesc: 'Integrated homoeopathy and clinical acupuncture for migraines, arthritis, sciatica, and chronic fatigue.',
     detailedDesc:
       'Chronic pain limits everyday joy. By integrating Dr. Kumaraiah’s 33+ years of homeopathy with his MD in clinical acupuncture, patients benefit from dual pain modulation that acts locally and systemically.',
-    heroImage: '/assets/images/mahima_d2.png',
+    heroImage: painLifestyleImg,
     conditions: [
       {
         name: 'Migraine & Tension Headaches',
@@ -229,7 +235,7 @@ export const treatmentCategories: TreatmentCategory[] = [
     shortDesc: 'Gentle pediatric care for recurrent coughs, poor appetite, immunity concerns, and elder wellness.',
     detailedDesc:
       'Homeopathy is beloved by parents because the natural sugar globules are easy to administer and free from harsh chemicals. Dr. Kumaraiah treats entire multigenerational families with warmth and patience.',
-    heroImage: '/assets/images/mahima_d3.png',
+    heroImage: familyPediatricImg,
     conditions: [
       {
         name: 'Pediatric Immunity & Recurrent Colds',
@@ -248,10 +254,10 @@ export const treatmentCategories: TreatmentCategory[] = [
       },
     ],
     keyBenefits: [
-      '100% natural, sweet globules loved by toddlers and children',
+      'All-natural, gentle sweet globules loved by toddlers and children',
       'No chemical drowsiness, grogginess, or gastrointestinal upset',
       'Safe for infants, nursing mothers, and senior family members',
-      'Affordable consultation fee of just ₹100 for family accessibility',
+      'Affordable, accessible consultations for the whole family',
     ],
     faq: [
       {
@@ -270,7 +276,7 @@ export const treatmentCategories: TreatmentCategory[] = [
     shortDesc: 'Synergizing classical constitutional homoeopathy with clinical acupuncture for deep systemic equilibrium.',
     detailedDesc:
       'Sri Mahima Clinic is one of the few clinics in Anantapur where classical Hahnemannian homoeopathy is combined with authentic acupuncture practice, offering patients an unparalleled holistic healing framework.',
-    heroImage: '/assets/images/mahima_d1.png',
+    heroImage: holisticHomeoImg,
     conditions: [
       {
         name: 'Classical Constitutional Homoeopathy',
