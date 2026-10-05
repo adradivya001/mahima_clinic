@@ -107,19 +107,36 @@ export function DoctorPage({ onOpenAppointment }: DoctorPageProps) {
                 </p>
               </div>
 
-              {/* Academic Affiliation Banner */}
-              <div className="p-4 rounded-2xl bg-botanical-50 border border-botanical-200 space-y-1">
-                <div className="flex items-center gap-2 font-bold text-xs text-botanical-900">
-                  <GraduationCap className="w-4 h-4 text-botanical-700" />
-                  <span>Academic Role &amp; Faculty Affiliation</span>
+              {/* Role & Leadership / Academic Banner */}
+              {activeDoc.leadershipRoles ? (
+                <div className="p-4 rounded-2xl bg-botanical-50 border border-botanical-200 space-y-1.5">
+                  <div className="flex items-center gap-2 font-bold text-xs text-botanical-900">
+                    <Award className="w-4 h-4 text-botanical-700" />
+                    <span>Key Professional Leadership &amp; Roles</span>
+                  </div>
+                  <div className="space-y-1 text-xs text-charcoal-800">
+                    {activeDoc.leadershipRoles.map((role, rIdx) => (
+                      <div key={rIdx} className="flex items-center gap-1.5 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-botanical-600 shrink-0" />
+                        <span>{role}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-sm font-semibold text-charcoal-900">
-                  {activeDoc.academicRole}
-                </p>
-                <p className="text-xs text-charcoal-600">
-                  {activeDoc.academicInstitution}
-                </p>
-              </div>
+              ) : (
+                <div className="p-4 rounded-2xl bg-botanical-50 border border-botanical-200 space-y-1">
+                  <div className="flex items-center gap-2 font-bold text-xs text-botanical-900">
+                    <GraduationCap className="w-4 h-4 text-botanical-700" />
+                    <span>Academic Role &amp; Faculty Affiliation</span>
+                  </div>
+                  <p className="text-sm font-semibold text-charcoal-900">
+                    {activeDoc.academicRole}
+                  </p>
+                  <p className="text-xs text-charcoal-600">
+                    {activeDoc.academicInstitution}
+                  </p>
+                </div>
+              )}
 
               <p className="text-sm sm:text-base text-charcoal-700 leading-relaxed">
                 {activeDoc.summary}

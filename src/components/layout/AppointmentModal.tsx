@@ -231,9 +231,10 @@ export function AppointmentModal({ isOpen, onClose, initialTreatment = 'General 
                         onChange={(e) => setFormData({ ...formData, doctor: e.target.value })}
                         className="w-full px-4 py-2.5 rounded-xl border border-botanical-200 bg-white text-sm text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-botanical-600 focus:border-transparent"
                       >
-                        <option value="Dr. Pogula Nagendra Babu (Chief Consultant)">Dr. Pogula Nagendra Babu (Chief Consultant)</option>
-                        <option value="Dr. Premajyothi Fraser (Wellness Physician)">Dr. Premajyothi Fraser (Wellness Physician)</option>
-                        <option value="Any Available Senior Consultant">Any Available Senior Consultant</option>
+                        <option value="Dr. P. Kumaraiah (M.D. – Sri Mahima Group)">Dr. P. Kumaraiah — B.H.M.S., M.D. (Acup.)</option>
+                        <option value="Dr. Pogula Nagendra Babu (Chief Consultant)">Dr. Pogula Nagendra Babu — B.H.M.S., M.D., M.B.A.</option>
+                        <option value="Dr. Premajyothi Fraser (Wellness Physician)">Dr. Premajyothi Fraser — B.H.M.S., M.D., F.H.P.C.</option>
+                        <option value="Any Available Senior Consultant">Any Available Senior Consultant (₹100 OPD)</option>
                       </select>
                     </div>
                   </div>

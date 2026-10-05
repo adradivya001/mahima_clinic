@@ -77,12 +77,20 @@ export function Footer() {
               <Award className="w-4 h-4" /> Doctor & Hours
             </h4>
             <div className="space-y-3 text-xs sm:text-sm text-sage-200">
-              <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                <p className="font-bold text-white text-xs">Dr. Pogula Nagendra Babu</p>
-                <p className="text-[11px] text-sage-300">B.H.M.S, M.D. (Hom), M.B.A.</p>
-                <p className="font-bold text-white text-xs mt-1.5">Dr. Premajyothi Fraser</p>
-                <p className="text-[11px] text-sage-300">B.H.M.S, M.D. (Hom), F.H.P.C.</p>
-                <p className="text-[10px] text-herbal-300 mt-1">Senior Faculty Consultants · ₹100 OPD</p>
+              <div className="p-3 rounded-xl bg-white/5 border border-white/10 space-y-1.5">
+                <div>
+                  <p className="font-bold text-white text-xs">Dr. P. Kumaraiah</p>
+                  <p className="text-[11px] text-sage-300">B.H.M.S., M.D. (Acup.) · M.D. Sri Mahima Group</p>
+                </div>
+                <div>
+                  <p className="font-bold text-white text-xs">Dr. Pogula Nagendra Babu</p>
+                  <p className="text-[11px] text-sage-300">B.H.M.S., M.D. (Hom), M.B.A.</p>
+                </div>
+                <div>
+                  <p className="font-bold text-white text-xs">Dr. Premajyothi Fraser</p>
+                  <p className="text-[11px] text-sage-300">B.H.M.S., M.D. (Hom), F.H.P.C.</p>
+                </div>
+                <p className="text-[10px] text-herbal-300 pt-0.5 border-t border-white/10">33+ Years Experience · ₹100 OPD</p>
               </div>
 
               <div className="flex items-start gap-2.5">
