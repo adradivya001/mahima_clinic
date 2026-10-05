@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #245C45;
+  --primary-dark: #1B4735;
+  --primary-light: #2E7452;
+  --secondary: #8FAF91;
+  --accent: #C69B52;
+  --accent-light: #DFB369;
+  --bg-ivory: #F7F5EE;
+  --text-charcoal: #17231D;
+  --text-muted: #515E56;
+  --border-light: #E2ECE5;
+  --font-display: 'Outfit', -apple-system, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: var(--bg-ivory);
+  color: var(--text-charcoal);
+  overflow-x: hidden;
+}
+
+/* Custom Typography Accents */
+.font-serif-title {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.font-display-title {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Botanical Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 236, 229, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(36, 92, 69, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(143, 175, 145, 0.3);
+}
+
+.glass-pill {
+  background: rgba(247, 245, 238, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(198, 155, 82, 0.25);
+}
+
+/* Botanical Pattern Overlay */
+.botanical-pattern {
+  background-color: #F7F5EE;
+  background-image: radial-gradient(#245C45 0.75px, transparent 0.75px), radial-gradient(#8FAF91 0.75px, #F7F5EE 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-opacity: 0.03;
+}
+
+.botanical-gradient-mesh {
+  background: radial-gradient(circle at 10% 20%, rgba(143, 175, 145, 0.15) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(198, 155, 82, 0.12) 0%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(36, 92, 69, 0.05) 0%, transparent 60%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #9BC7AE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #245C45;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: #245C45;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 9999;
+  transition: top 0.2s;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Botanical Button Animations */
+.btn-botanical {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-botanical:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(36, 92, 69, 0.3);
+}
+
+.btn-herbal {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-herbal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(198, 155, 82, 0.35);
+}
+
+/* Custom Mask Styles */
+.organic-shape-1 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+.organic-shape-2 {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
