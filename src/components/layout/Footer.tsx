@@ -32,12 +32,12 @@ export function Footer() {
                 <h3 className="font-serif font-bold text-lg text-white">
                   Sri Mahima Clinic
                 </h3>
-                <p className="text-xs text-sage-300">Multispeciality Homoeo Care</p>
+                <p className="text-xs text-sage-300">Multispeciality Homeo Care</p>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-sage-200/90 leading-relaxed">
-              Trusted homoeopathic healthcare & acupuncture clinic in Anantapur. Led by Dr. Pogula Kumaraiah with 33+ years of dedicated clinical experience.
+              Trusted homeopathic healthcare clinic in Anantapur &amp; Bengaluru. Led by senior medical faculty consultants with 33+ years of clinical trust.
             </p>
 
             <div className="p-3 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">

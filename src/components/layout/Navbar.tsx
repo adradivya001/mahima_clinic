@@ -114,7 +114,7 @@ export function Navbar({ onOpenAppointment }: NavbarProps) {
                     Sri Mahima
                   </span>
                   <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-herbal-100 text-herbal-800 border border-herbal-200 hidden sm:inline-block">
-                    Homoeo
+                    Homeo
                   </span>
                 </div>
                 <span className="text-[11px] font-medium text-charcoal-500 tracking-wide uppercase">
@@ -204,7 +204,7 @@ export function Navbar({ onOpenAppointment }: NavbarProps) {
                 />
                 <div>
                   <div className="text-xs font-bold text-botanical-900">Dr. Nagendra Babu &amp; Dr. Premajyothi Fraser</div>
-                  <div className="text-[11px] text-charcoal-600">Chief Homoeopathy Consultants · 4.9★ Rated</div>
+                  <div className="text-[11px] text-charcoal-600">Chief Homeopathy Consultants · 4.9★ Rated</div>
                 </div>
               </div>
 
