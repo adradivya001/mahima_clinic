@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
-import { Calendar, Phone, Star, MapPin, ArrowRight, Clock, Building2 } from 'lucide-react';
+import { Calendar, Phone, Star, MapPin, ArrowRight, Clock, ShieldCheck, CheckCircle2, Award, HeartHandshake, UserCheck } from 'lucide-react';
 import { siteConfig } from '@/content/site.config';
+import { doctorsList } from '@/content/doctor';
 import { BotanicalParticles } from '@/components/effects/BotanicalParticles';
 import { trackEvent } from '@/lib/analytics';
-import mahimaBuilding from '@/assets/images/mahima_building.png';
+import mahimaLogo from '@/assets/logo/mahima_logo.png';
 
 interface HeroProps {
   onOpenAppointment: () => void;
@@ -104,7 +105,7 @@ export function Hero({ onOpenAppointment }: HeroProps) {
 
           </motion.div>
 
-          {/* Right Visual Composition (5 cols): Clinic Facility Showcase */}
+          {/* Right Visual Column (5 cols): Elegant Consultation & Schedule Card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -113,44 +114,102 @@ export function Hero({ onOpenAppointment }: HeroProps) {
           >
             <div className="relative mx-auto max-w-sm lg:max-w-none">
               
-              {/* Main Visual Image Card */}
-              <div className="relative rounded-3xl overflow-hidden bg-white p-2.5 shadow-xl border border-botanical-200">
+              {/* Main Information Card */}
+              <div className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-botanical-200/90 space-y-5">
                 
-                {/* Header Tag */}
-                <div className="flex items-center justify-between mb-2 px-1">
-                  <div className="flex items-center gap-1.5 bg-botanical-50 px-3 py-1 rounded-xl border border-botanical-100 text-botanical-800 font-bold text-xs">
-                    <Building2 className="w-3.5 h-3.5 text-botanical-600" />
-                    <span>Clinic Facility Entrance</span>
+                {/* Header Branding Row */}
+                <div className="flex items-center justify-between pb-4 border-b border-botanical-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 rounded-2xl bg-white border border-botanical-200 shadow-xs flex items-center justify-center p-1">
+                      <img
+                        src={mahimaLogo}
+                        alt="Sri Mahima Clinic"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-serif font-bold text-base text-botanical-900">
+                        Sri Mahima Clinic
+                      </h3>
+                      <p className="text-[11px] text-charcoal-500 font-medium">
+                        Multispeciality Homeo Care
+                      </p>
+                    </div>
                   </div>
 
-                  <span className="text-[11px] font-bold text-herbal-800 bg-herbal-100 px-2 py-0.5 rounded-md border border-herbal-200">
-                    Vidyuth Nagar Circle
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-herbal-100 text-herbal-800 border border-herbal-200">
+                    OPD: ₹100
                   </span>
                 </div>
 
-                {/* Photo Display Frame */}
-                <div className="relative aspect-[4/4.6] rounded-2xl overflow-hidden bg-botanical-50">
-                  <img
-                    src={mahimaBuilding}
-                    alt="Sri Mahima Multispeciality Homeo Clinic Entrance"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    loading="eager"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-botanical-950/80 via-transparent to-transparent pointer-events-none" />
+                {/* Senior Doctors Roster Preview */}
+                <div className="space-y-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-charcoal-500 block">
+                    Our Senior Physicians &amp; Faculty
+                  </span>
 
-                  {/* Building Caption */}
-                  <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-botanical-700/90 text-[10px] font-bold text-herbal-300 uppercase tracking-wider mb-1">
-                      <MapPin className="w-2.5 h-2.5" /> Anantapur Center
-                    </div>
-                    <h2 className="text-base font-serif font-bold text-white leading-tight">
-                      Sri Mahima Multispeciality Homeo Clinic
-                    </h2>
-                    <p className="text-[11px] text-sage-200">
-                      12/4/75, Vidyuth Nagar Circle, Anantapur
-                    </p>
+                  <div className="space-y-2">
+                    {doctorsList.map((doc) => (
+                      <div
+                        key={doc.id}
+                        className="p-2.5 rounded-2xl bg-[#FCFBF8] border border-botanical-100 flex items-center justify-between gap-2 hover:border-botanical-300 transition-colors"
+                      >
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className="w-8 h-8 rounded-full overflow-hidden border border-botanical-200 shrink-0 bg-botanical-100">
+                            <img
+                              src={doc.image}
+                              alt={doc.name}
+                              className="w-full h-full object-cover object-top"
+                            />
+                          </div>
+                          <div className="min-w-0">
+                            <h4 className="text-xs font-bold text-botanical-900 truncate">
+                              {doc.name}
+                            </h4>
+                            <p className="text-[10px] text-charcoal-500 truncate">
+                              {doc.qualifications.join(', ')}
+                            </p>
+                          </div>
+                        </div>
+
+                        <span className="text-[10px] font-semibold text-botanical-700 bg-botanical-50 px-2 py-0.5 rounded-md border border-botanical-100 whitespace-nowrap">
+                          {doc.id === 'dr-p-kumaraiah' ? '33+ Yrs' : 'Faculty'}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
+
+                {/* Consultation Schedule Box */}
+                <div className="p-3.5 rounded-2xl bg-botanical-50/80 border border-botanical-100 space-y-1.5 text-xs text-charcoal-700">
+                  <div className="flex items-center justify-between font-semibold text-botanical-900">
+                    <span className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-botanical-600" />
+                      <span>Daily OPD Hours</span>
+                    </span>
+                    <span className="text-[11px] text-herbal-800 font-bold">Mon – Sat</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-[11px] pt-1 text-charcoal-600">
+                    <div className="bg-white p-1.5 rounded-lg border border-botanical-100 text-center">
+                      <span className="block text-[10px] text-charcoal-400">Morning</span>
+                      <strong className="text-botanical-900">9:00 AM – 1:30 PM</strong>
+                    </div>
+                    <div className="bg-white p-1.5 rounded-lg border border-botanical-100 text-center">
+                      <span className="block text-[10px] text-charcoal-400">Evening</span>
+                      <strong className="text-botanical-900">4:00 PM – 8:30 PM</strong>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Book Slot Trigger */}
+                <button
+                  onClick={onOpenAppointment}
+                  className="w-full py-3 rounded-2xl bg-botanical-700 hover:bg-botanical-800 text-white font-bold text-xs shadow-botanical transition-all flex items-center justify-center gap-2"
+                >
+                  <Calendar className="w-4 h-4 text-herbal-300" />
+                  <span>Request OPD Consultation (₹100)</span>
+                </button>
+
               </div>
 
               {/* Floating Rating Badge Overlay on Corner */}

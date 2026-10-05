@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, Heart, Sparkles, CheckCircle2, Award, Clock, ArrowRight, MapPin } from 'lucide-react';
 import { siteConfig } from '@/content/site.config';
-import mahimaBuilding from '@/assets/images/mahima_building.png';
 
 interface AboutProps {
   onOpenAppointment: () => void;
@@ -32,7 +31,7 @@ export function About({ onOpenAppointment }: AboutProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Left Visual: Hospital Building (5 cols) */}
+          {/* Left Visual: Clinic Heritage Card (5 cols) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -40,29 +39,40 @@ export function About({ onOpenAppointment }: AboutProps) {
             transition={{ duration: 0.5 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-premium border border-botanical-200 bg-botanical-50">
-              <img
-                src={mahimaBuilding}
-                alt="Sri Mahima Multispeciality Homoeo Clinic Entrance"
-                className="w-full h-[380px] sm:h-[440px] object-cover hover:scale-105 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-botanical-950/85 via-botanical-950/20 to-transparent pointer-events-none" />
-
-              {/* Location Tag */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-botanical-200 shadow-sm flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5 text-botanical-700" />
-                <span className="text-xs font-bold text-botanical-900">Vidyuth Nagar Circle, Anantapur</span>
+            <div className="bg-gradient-to-br from-botanical-800 to-botanical-700 text-white rounded-3xl p-6 sm:p-8 shadow-botanical space-y-6">
+              <div className="flex items-center justify-between pb-4 border-b border-white/10">
+                <div className="flex items-center gap-2 text-herbal-300 text-xs font-bold uppercase tracking-wider">
+                  <Sparkles className="w-4 h-4" /> Clinical Heritage
+                </div>
+                <span className="text-[10px] bg-white/10 px-2.5 py-1 rounded-full text-sage-200">
+                  Est. 1990s
+                </span>
               </div>
 
-              {/* Bottom Badge */}
-              <div className="absolute bottom-5 left-5 right-5 text-white">
-                <p className="text-sm font-serif font-bold text-white">
-                  Sri Mahima Multispeciality Homoeo Clinic
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
+                  33+ Years of Trusted Care
+                </h3>
+                <p className="text-xs sm:text-sm text-sage-200 leading-relaxed">
+                  Sri Mahima Multispeciality Homeo Clinic was founded with a mission to deliver pure, compassionate constitutional care to families across Anantapur and Rayalaseema.
                 </p>
-                <p className="text-xs text-sage-200">
-                  Trusted Homoeopathic Healthcare for over 33+ Years
-                </p>
+              </div>
+
+              {/* Metric Highlights */}
+              <div className="grid grid-cols-2 gap-3 pt-2">
+                <div className="p-3 rounded-2xl bg-white/10 border border-white/10 text-center">
+                  <span className="block text-xl sm:text-2xl font-serif font-bold text-white">4.9 ★</span>
+                  <span className="text-[10px] text-sage-300">920+ Google Reviews</span>
+                </div>
+                <div className="p-3 rounded-2xl bg-white/10 border border-white/10 text-center">
+                  <span className="block text-xl sm:text-2xl font-serif font-bold text-white">₹100</span>
+                  <span className="text-[10px] text-sage-300">Nominal OPD Fee</span>
+                </div>
+              </div>
+
+              <div className="pt-2 flex items-center gap-2 text-xs text-sage-200">
+                <MapPin className="w-4 h-4 text-herbal-400 shrink-0" />
+                <span>12/4/75, Vidyuth Nagar Circle, Anantapur</span>
               </div>
             </div>
           </motion.div>

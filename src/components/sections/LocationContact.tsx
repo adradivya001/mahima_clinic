@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Phone, Clock, MessageCircle, Navigation, Calendar, Mail, CheckCircle2, Sparkles, Building2, User } from 'lucide-react';
 import { siteConfig } from '@/content/site.config';
 import { trackEvent } from '@/lib/analytics';
-import mahimaBuilding from '@/assets/images/mahima_building.png';
 
 interface LocationContactProps {
   onOpenAppointment: () => void;
@@ -65,32 +64,23 @@ export function LocationContact({ onOpenAppointment }: LocationContactProps) {
           {/* Left Column: Clinic Card + Address (5 cols) */}
           <div className="lg:col-span-5 space-y-5 flex flex-col justify-between">
             
-            {/* Building Photo / Location Info Card */}
-            <div className="bg-[#FCFBF8] rounded-3xl p-5 border border-botanical-200 shadow-soft space-y-3">
-              {selectedBranchId === 'anantapur' ? (
-                <div className="relative rounded-2xl overflow-hidden aspect-[16/10] bg-botanical-100 border border-botanical-200">
-                  <img
-                    src={mahimaBuilding}
-                    alt="Sri Mahima Clinic Building Facade and Entrance"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-bold text-botanical-900 shadow-xs flex items-center gap-1.5">
-                    <Building2 className="w-3.5 h-3.5 text-botanical-700" />
-                    <span>Clinic Facility</span>
-                  </div>
+            {/* Clinic Info Card */}
+            <div className="bg-[#FCFBF8] rounded-3xl p-5 sm:p-6 border border-botanical-200 shadow-soft space-y-4">
+              <div className="p-4 rounded-2xl bg-botanical-50 border border-botanical-200 space-y-1.5">
+                <div className="flex items-center gap-2 text-botanical-900 font-bold text-xs">
+                  <Building2 className="w-4 h-4 text-botanical-700" />
+                  <span>{activeBranch.city}</span>
                 </div>
-              ) : (
-                <div className="p-4 rounded-2xl bg-botanical-50 border border-botanical-200 space-y-1.5">
-                  <div className="flex items-center gap-2 text-botanical-800 font-bold text-xs">
-                    <Building2 className="w-4 h-4 text-botanical-600" />
-                    <span>Bengaluru Center</span>
-                  </div>
+                {selectedBranchId === 'bengaluru' ? (
                   <p className="text-xs text-charcoal-700">
                     Associated with <strong>Dr. Nagendra Babu Pogula</strong> (Professor, Anuradha Homoeopathic Medical College &amp; Hospital, Bengaluru).
                   </p>
-                </div>
-              )}
+                ) : (
+                  <p className="text-xs text-charcoal-700">
+                    Main Consultation Center with Dr. P. Kumaraiah, Dr. Pogula Nagendra Babu &amp; Dr. Premajyothi Fraser.
+                  </p>
+                )}
+              </div>
 
               <div className="px-1 space-y-1">
                 <div className="flex items-center gap-2">

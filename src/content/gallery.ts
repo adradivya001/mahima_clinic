@@ -2,7 +2,6 @@
 // CLINIC GALLERY DATA
 // Sri Mahima Multispeciality Homoeo Clinic
 // ============================================================
-import mahimaBuilding from '@/assets/images/mahima_building.png';
 import mahimaD1 from '@/assets/images/mahima_d1.png';
 import mahimaD2 from '@/assets/images/mahima_d2.png';
 import mahimaD3 from '@/assets/images/mahima_d3.png';
@@ -10,20 +9,20 @@ import mahimaD3 from '@/assets/images/mahima_d3.png';
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Clinic Exterior' | 'Reception' | 'Consultation' | 'Waiting Area';
+  category: 'Consultation' | 'Reception' | 'Waiting Area';
   image: string;
   caption: string;
 }
 
-export const galleryCategories = ['All Areas', 'Clinic Exterior', 'Reception', 'Consultation', 'Waiting Area'] as const;
+export const galleryCategories = ['All Areas', 'Consultation', 'Reception', 'Waiting Area'] as const;
 
 export const galleryItems: GalleryItem[] = [
   {
     id: 'gal-1',
-    title: 'Clinic Building & Main Entrance',
-    category: 'Clinic Exterior',
-    image: mahimaBuilding,
-    caption: 'Prominent exterior facade and clinic entrance at 12/4/75 Vidyuth Nagar Circle, Anantapur.',
+    title: 'Senior Physician Consultation Suite',
+    category: 'Consultation',
+    image: mahimaD1,
+    caption: 'Private consultation desk where detailed constitutional case taking and evaluation takes place.',
   },
   {
     id: 'gal-2',
